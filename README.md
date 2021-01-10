@@ -1,4 +1,4 @@
-#Anlisis discriminantec uadrtico QDA con RStudio
+# Análisis discriminante cuadrtico QDA con RStudio
 
 QDA no es realmente muy diferente de LDA, excepto que asume que la matriz de covarianza puede ser diferente para cada clase y, por lo tanto, estimaremos la matriz de covarianza por separado para cada clase $k$ , $k = 1, 2, ..., K$ .
 
