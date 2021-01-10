@@ -1,8 +1,8 @@
-# An-lisis-discriminante-cuadr-tico---QDA-con-RStudio
+#Anlisis discriminantec uadrtico QDA con RStudio
 
 QDA no es realmente muy diferente de LDA, excepto que asume que la matriz de covarianza puede ser diferente para cada clase y, por lo tanto, estimaremos la matriz de covarianza por separado para cada clase $k$ , $k = 1, 2, ..., K$ .
 
-## **Paso 1. Carga de paquetes R requeridos.**
+# **Paso 1. Carga de paquetes R requeridos.**
 
 ```{r message=FALSE}
 library(tidyverse)
@@ -11,7 +11,7 @@ library(klaR)
 theme_set(theme_classic())
 ```
 
-## **Paso 2. Preparando los datos.**
+# **Paso 2. Preparando los datos.**
 
 **2.1. Divida los datos en entrenamiento y conjunto de prueba:**
   
@@ -46,12 +46,12 @@ modelqda <- qda(Species~., data = train.transformed)
 modelqda
 
 ```
-## paso 4.**Gráficos de partición QDA**
+# paso 4.**Gráficos de partición QDA**
 ```{r} 
 partimat(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data=train.transformed, method="qda")
 ```
 
-## **Paso 5: use el modelo para hacer predicciones**
+# **Paso 5: use el modelo para hacer predicciones**
 
 ```{r}
 # haciendo predicciones
@@ -59,7 +59,7 @@ predictionsqda <- modelqda %>% predict(test.transformed)
 names(predictionsqda)
 ```
 
-## **Paso 6: evaluar el modelo**
+# **Paso 6: evaluar el modelo**
 ```{r}
 # Precision del Modelo
 mean(predictionsqda$class == test.transformed$Species)
