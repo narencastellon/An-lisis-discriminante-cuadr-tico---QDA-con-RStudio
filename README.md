@@ -1,0 +1,1 @@
+# An-lisis-discriminante-cuadr-tico---QDA-con-RStudio
